@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Quote" ALTER COLUMN "people" SET DATA TYPE TEXT;
