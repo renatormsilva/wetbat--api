@@ -17,4 +17,4 @@ app.use(routes);
 
 const port = process.env.PORT;
 
-app.listen(port || 5002, () => console.log("Server up ina " + port));
+app.listen(port || 5002, () => console.log("Server up in " + port));
