@@ -11,12 +11,12 @@ datasource db {
 }
 
 model Quote {
-  id   Int    @id @default(autoincrement())
-  name String
-  destination String
-  from String
-  departDate String
-  returnDate String 
-  people Int
+  id             Int    @id @default(autoincrement())
+  name           String
+  destination    String
+  from           String
+  departDate     String
+  returnDate     String
+  people         Int
   transportation String
 }

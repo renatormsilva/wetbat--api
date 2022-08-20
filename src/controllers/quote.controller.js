@@ -1,10 +1,7 @@
-const express = require("express");
 const { PrismaClient } = require("@prisma/client");
-const routes = express.Router();
-
 const prisma = new PrismaClient();
 
-routes.post("/quotes", async (request, response) => {
+exports.createQuote = async (request, response) => {
   const {
     name,
     destination,
@@ -26,14 +23,14 @@ routes.post("/quotes", async (request, response) => {
     },
   });
   return response.status(201).json(quote);
-});
+};
 
-routes.get("/quotes", async (request, response) => {
+exports.listAllQuotes = async (request, response) => {
   const quotes = await prisma.quote.findMany();
   return response.status(200).json(quotes);
-});
+};
 
-routes.put("/quotes", async (request, response) => {
+exports.updateQuoteById = async (request, response) => {
   const {
     name,
     id,
@@ -69,9 +66,9 @@ routes.put("/quotes", async (request, response) => {
     },
   });
   return response.status(200).json(quote);
-});
+};
 
-routes.delete("/quotes/:id", async (request, response) => {
+exports.deleteQuoteById = async (request, response) => {
   const { id } = request.params;
 
   const intId = parseInt(id);
@@ -89,6 +86,4 @@ routes.delete("/quotes/:id", async (request, response) => {
 
   await prisma.quote.delete({ where: { id: intId } });
   return response.status(200).send();
-});
-
-module.exports = routes;
+};

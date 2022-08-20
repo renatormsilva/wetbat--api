@@ -1,6 +1,6 @@
 const cors = require("cors");
 const express = require("express");
-const routes = require("./routes");
+const routes = require("./routes/quote.routes");
 
 const app = express();
 
@@ -14,10 +14,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 app.use(routes);
-app.get("/re", (req, res) => {
-  return res.json("hello world");
-});
 
-const port = process.env.PORT
+const port = process.env.PORT;
 
-app.listen(port || 5002, () => console.log("Server up in "+port));
+app.listen(port || 5002, () => console.log("Server up ina " + port));
