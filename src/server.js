@@ -18,4 +18,6 @@ app.get("/re", (req, res) => {
   return res.json("hello world");
 });
 
-app.listen(process.env.PORT || 5002, () => console.log("Server up in 5002"));
+const port = process.env.PORT
+
+app.listen(port || 5002, () => console.log("Server up in "+port));
