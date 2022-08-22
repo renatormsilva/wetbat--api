@@ -1,4 +1,4 @@
-# Aplicação with Node.js + PostgreSQL + PRISMA & Heroku
+# application with Node.js + PostgreSQL + PRISMA & Heroku
 
 [![Black-and-White-Geometric-Technology-Keynote-Presentation.jpg](https://i.postimg.cc/W4b5J1YF/Captura-de-tela-de-2022-08-22-13-39-17.png)](https://postimg.cc/XrmfR4b4)
 
